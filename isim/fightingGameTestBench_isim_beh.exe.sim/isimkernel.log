@@ -1,0 +1,28 @@
+Command line:
+   fightingGameTestBench_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50208
+
+Sun Jan 28 21:58:25 2024
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5155.23 Meg
+
+ Total Signals          : 42
+ Total Nets             : 40
+ Total Signal Drivers   : 18
+ Total Blocks           : 5
+ Total Primitive Blocks : 3
+ Total Processes        : 23
+ Total Traceable Variables  : 63
+ Total Scalar Nets and Variables : 271
+
+ Total Simulation Time: 0.125 sec
+
+ Current Memory Usage: 4997.94 Meg
+
+Sun Jan 28 21:59:53 2024
+

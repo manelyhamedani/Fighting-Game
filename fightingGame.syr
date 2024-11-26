@@ -1,0 +1,646 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: fightingGame.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fightingGame.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fightingGame"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-pq208
+
+---- Source Options
+Top Module Name                    : fightingGame
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "showLives.v" in library work
+Compiling verilog file "player2.v" in library work
+Module <showLives> compiled
+Compiling verilog file "player1.v" in library work
+Module <player2> compiled
+Compiling verilog file "Decoder.v" in library work
+Module <player1> compiled
+Compiling verilog file "fightingGame.v" in library work
+Module <Decoder> compiled
+Module <fightingGame> compiled
+No errors in compilation
+Analysis of file <"fightingGame.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <fightingGame> in library <work>.
+
+Analyzing hierarchy for module <player1> in library <work> with parameters.
+	jump = "011"
+	kick = "000"
+	left = "100"
+	p1h0 = "0100"
+	p1h1 = "0101"
+	p1h2 = "0110"
+	p1h3 = "0111"
+	p2h0 = "1000"
+	p2h1 = "1001"
+	p2h2 = "1010"
+	p2h3 = "1011"
+	p3h0 = "1100"
+	p3h1 = "1101"
+	p3h2 = "1110"
+	p3h3 = "1111"
+	punch = "001"
+	right = "101"
+	sabr = "010"
+
+Analyzing hierarchy for module <player2> in library <work> with parameters.
+	jump = "011"
+	kick = "000"
+	left = "100"
+	p1h0 = "0100"
+	p1h1 = "0101"
+	p1h2 = "0110"
+	p1h3 = "0111"
+	p2h0 = "1000"
+	p2h1 = "1001"
+	p2h2 = "1010"
+	p2h3 = "1011"
+	p3h0 = "1100"
+	p3h1 = "1101"
+	p3h2 = "1110"
+	p3h3 = "1111"
+	punch = "001"
+	right = "101"
+	sabr = "010"
+
+Analyzing hierarchy for module <showLives> in library <work>.
+
+Analyzing hierarchy for module <Decoder> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <fightingGame>.
+Module <fightingGame> is correct for synthesis.
+ 
+Analyzing module <player1> in library <work>.
+	jump = 3'b011
+	kick = 3'b000
+	left = 3'b100
+	p1h0 = 4'b0100
+	p1h1 = 4'b0101
+	p1h2 = 4'b0110
+	p1h3 = 4'b0111
+	p2h0 = 4'b1000
+	p2h1 = 4'b1001
+	p2h2 = 4'b1010
+	p2h3 = 4'b1011
+	p3h0 = 4'b1100
+	p3h1 = 4'b1101
+	p3h2 = 4'b1110
+	p3h3 = 4'b1111
+	punch = 3'b001
+	right = 3'b101
+	sabr = 3'b010
+Module <player1> is correct for synthesis.
+ 
+Analyzing module <player2> in library <work>.
+	jump = 3'b011
+	kick = 3'b000
+	left = 3'b100
+	p1h0 = 4'b0100
+	p1h1 = 4'b0101
+	p1h2 = 4'b0110
+	p1h3 = 4'b0111
+	p2h0 = 4'b1000
+	p2h1 = 4'b1001
+	p2h2 = 4'b1010
+	p2h3 = 4'b1011
+	p3h0 = 4'b1100
+	p3h1 = 4'b1101
+	p3h2 = 4'b1110
+	p3h3 = 4'b1111
+	punch = 3'b001
+	right = 3'b101
+	sabr = 3'b010
+Module <player2> is correct for synthesis.
+ 
+Analyzing module <showLives> in library <work>.
+Module <showLives> is correct for synthesis.
+ 
+Analyzing module <Decoder> in library <work>.
+Module <Decoder> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <player1>.
+    Related source file is "player1.v".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 177                                            |
+    | Inputs             | 11                                             |
+    | Outputs            | 11                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0111                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <waitCount>.
+    Found 1-bit adder for signal <waitCount$addsub0000>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <player1> synthesized.
+
+
+Synthesizing Unit <player2>.
+    Related source file is "player2.v".
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 177                                            |
+    | Inputs             | 11                                             |
+    | Outputs            | 11                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0111                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <waitCount>.
+    Found 1-bit adder for signal <waitCount$addsub0000>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <player2> synthesized.
+
+
+Synthesizing Unit <showLives>.
+    Related source file is "showLives.v".
+    Found 8-bit register for signal <SEG_DATA>.
+    Found 5-bit register for signal <SEG_SEL>.
+    Found T flip-flop for signal <controller>.
+    Summary:
+	inferred   1 T-type flip-flop(s).
+	inferred  13 D-type flip-flop(s).
+Unit <showLives> synthesized.
+
+
+Synthesizing Unit <Decoder>.
+    Related source file is "Decoder.v".
+Unit <Decoder> synthesized.
+
+
+Synthesizing Unit <fightingGame>.
+    Related source file is "fightingGame.v".
+Unit <fightingGame> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 1-bit adder                                           : 2
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 5-bit register                                        : 1
+ 8-bit register                                        : 1
+# Toggle Registers                                     : 1
+ T flip-flop                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <p2/state/FSM> on signal <state[1:11]> with one-hot encoding.
+----------------------
+ State | Encoding
+----------------------
+ 0111  | 00000000001
+ 0110  | 00000000010
+ 1000  | 00000000100
+ 1001  | 00000001000
+ 0101  | 00000010000
+ 1010  | 00000100000
+ 1011  | 00001000000
+ 1100  | 00010000000
+ 1101  | 00100000000
+ 1110  | 01000000000
+ 1111  | 10000000000
+----------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <p1/state/FSM> on signal <state[1:11]> with one-hot encoding.
+----------------------
+ State | Encoding
+----------------------
+ 0111  | 00000000001
+ 0110  | 00000000010
+ 1000  | 00000000100
+ 1001  | 00000001000
+ 0101  | 00000010000
+ 1010  | 00000100000
+ 1011  | 00001000000
+ 1100  | 00010000000
+ 1101  | 00100000000
+ 1110  | 01000000000
+ 1111  | 10000000000
+----------------------
+INFO:Xst:2261 - The FF/Latch <SEG_SEL_2> in Unit <sl> is equivalent to the following 2 FFs/Latches, which will be removed : <SEG_SEL_3> <SEG_SEL_4> 
+WARNING:Xst:1710 - FF/Latch <SEG_SEL_2> (without init value) has a constant value of 0 in block <sl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SEG_DATA_7> (without init value) has a constant value of 0 in block <sl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <SEG_DATA<7:7>> (without init value) have a constant value of 0 in block <showLives>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Adders/Subtractors                                   : 2
+ 1-bit adder                                           : 2
+# Registers                                            : 15
+ Flip-Flops                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <SEG_SEL_2> (without init value) has a constant value of 0 in block <showLives>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SEG_SEL_3> (without init value) has a constant value of 0 in block <showLives>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SEG_SEL_4> (without init value) has a constant value of 0 in block <showLives>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <SEG_DATA_0> in Unit <showLives> is equivalent to the following FF/Latch, which will be removed : <SEG_DATA_3> 
+INFO:Xst:2261 - The FF/Latch <controller_0> in Unit <showLives> is equivalent to the following FF/Latch, which will be removed : <SEG_SEL_1> 
+
+Optimizing unit <fightingGame> ...
+
+Optimizing unit <player1> ...
+
+Optimizing unit <player2> ...
+
+Optimizing unit <showLives> ...
+WARNING:Xst:1710 - FF/Latch <SEG_DATA_1> (without init value) has a constant value of 1 in block <showLives>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fightingGame, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : fightingGame.ngr
+Top Level Output File Name         : fightingGame
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 28
+
+Cell Usage :
+# BELS                             : 244
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 22
+#      LUT2_D                      : 3
+#      LUT2_L                      : 3
+#      LUT3                        : 48
+#      LUT3_L                      : 2
+#      LUT4                        : 112
+#      LUT4_D                      : 17
+#      LUT4_L                      : 22
+#      MUXF5                       : 12
+#      VCC                         : 1
+# FlipFlops/Latches                : 31
+#      FD                          : 6
+#      FDC                         : 20
+#      FDE                         : 2
+#      FDP                         : 2
+#      FDR                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 28
+#      IBUF                        : 9
+#      OBUF                        : 19
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-5 
+
+ Number of Slices:                      121  out of   3584     3%  
+ Number of Slice Flip Flops:             31  out of   7168     0%  
+ Number of 4 input LUTs:                230  out of   7168     3%  
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of    141    19%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)      | Load  |
+-----------------------------------+----------------------------+-------+
+controlledClk1(controlledClk:O)    | BUFG(*)(p1/state_FSM_FFd11)| 24    |
+clk                                | IBUF+BUFG                  | 7     |
+-----------------------------------+----------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------+------------------------+-------+
+Control Signal                                               | Buffer(FF name)        | Load  |
+-------------------------------------------------------------+------------------------+-------+
+p1/state_FSM_Acst_FSM_inv(p2/state_FSM_Acst_FSM_inv1_INV_0:O)| NONE(p1/state_FSM_FFd1)| 22    |
+-------------------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.332ns (Maximum Frequency: 107.156MHz)
+   Minimum input arrival time before clock: 9.213ns
+   Maximum output required time after clock: 10.883ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'controlledClk1'
+  Clock period: 9.332ns (frequency: 107.156MHz)
+  Total number of paths / destination ports: 1768 / 24
+-------------------------------------------------------------------------
+Delay:               9.332ns (Levels of Logic = 6)
+  Source:            p2/state_FSM_FFd1 (FF)
+  Destination:       p1/state_FSM_FFd3 (FF)
+  Source Clock:      controlledClk1 rising
+  Destination Clock: controlledClk1 rising
+
+  Data Path: p2/state_FSM_FFd1 to p1/state_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             12   0.626   1.120  p2/state_FSM_FFd1 (p2/state_FSM_FFd1)
+     LUT4_D:I1->O          7   0.479   1.201  p2/state_or00009 (p2/state_or00009)
+     LUT2_D:I0->O          6   0.479   0.876  p2/state_or000010 (state2<3>)
+     LUT4:I3->O            8   0.479   0.980  p1/state_FSM_FFd3-In2 (p1/state_FSM_N5)
+     LUT4:I2->O            1   0.479   0.740  p1/state_FSM_FFd3-In58 (p1/state_FSM_FFd3-In58)
+     LUT4:I2->O            1   0.479   0.740  p1/state_FSM_FFd3-In64 (p1/state_FSM_FFd3-In64)
+     LUT4:I2->O            1   0.479   0.000  p1/state_FSM_FFd3-In94 (p1/state_FSM_FFd3-In)
+     FDC:D                     0.176          p1/state_FSM_FFd3
+    ----------------------------------------
+    Total                      9.332ns (3.676ns logic, 5.656ns route)
+                                       (39.4% logic, 60.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.862ns (frequency: 349.357MHz)
+  Total number of paths / destination ports: 10 / 7
+-------------------------------------------------------------------------
+Delay:               2.862ns (Levels of Logic = 2)
+  Source:            sl/controller_0 (FF)
+  Destination:       sl/SEG_DATA_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: sl/controller_0 to sl/SEG_DATA_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.626   1.267  sl/controller_0 (sl/controller_0)
+     LUT4:I0->O            1   0.479   0.000  sl/SEG_DATA_mux0000<5>1 (sl/SEG_DATA_mux0000<5>1)
+     MUXF5:I1->O           1   0.314   0.000  sl/SEG_DATA_mux0000<5>_f5 (sl/SEG_DATA_mux0000<5>)
+     FD:D                      0.176          sl/SEG_DATA_2
+    ----------------------------------------
+    Total                      2.862ns (1.595ns logic, 1.267ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'controlledClk1'
+  Total number of paths / destination ports: 662 / 26
+-------------------------------------------------------------------------
+Offset:              9.213ns (Levels of Logic = 7)
+  Source:            action2<1> (PAD)
+  Destination:       p1/state_FSM_FFd8 (FF)
+  Destination Clock: controlledClk1 rising
+
+  Data Path: action2<1> to p1/state_FSM_FFd8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   0.715   1.890  action2_1_IBUF (action2_1_IBUF)
+     LUT2:I0->O            3   0.479   0.941  p1/state_FSM_FFd3-In2_SW0 (N35)
+     LUT4:I1->O            6   0.479   1.023  p1/state_FSM_FFd4-In41 (p1/N23)
+     LUT3_L:I1->LO         1   0.479   0.123  p1/state_FSM_FFd8-In1_SW0 (N33)
+     LUT4:I3->O            2   0.479   0.768  p1/state_FSM_FFd8-In1 (p1/N17)
+     LUT4:I3->O            1   0.479   0.704  p1/state_FSM_FFd8-In9_SW0 (N58)
+     LUT4:I3->O            1   0.479   0.000  p1/state_FSM_FFd8-In68 (p1/state_FSM_FFd8-In)
+     FDC:D                     0.176          p1/state_FSM_FFd8
+    ----------------------------------------
+    Total                      9.213ns (3.765ns logic, 5.448ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              6.507ns (Levels of Logic = 1)
+  Source:            sl/controller_0 (FF)
+  Destination:       SEG_SEL<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: sl/controller_0 to SEG_SEL<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.626   0.972  sl/controller_0 (sl/controller_0)
+     OBUF:I->O                 4.909          SEG_SEL_1_OBUF (SEG_SEL<1>)
+    ----------------------------------------
+    Total                      6.507ns (5.535ns logic, 0.972ns route)
+                                       (85.1% logic, 14.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'controlledClk1'
+  Total number of paths / destination ports: 90 / 6
+-------------------------------------------------------------------------
+Offset:              10.883ns (Levels of Logic = 4)
+  Source:            p1/state_FSM_FFd8 (FF)
+  Destination:       place1<1> (PAD)
+  Source Clock:      controlledClk1 rising
+
+  Data Path: p1/state_FSM_FFd8 to place1<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             10   0.626   1.259  p1/state_FSM_FFd8 (p1/state_FSM_FFd8)
+     LUT2:I0->O            1   0.479   0.704  p1/state_FSM_FFd4-In122 (p1/N13)
+     LUT4_D:I3->O         11   0.479   1.267  p1/state_or0000 (state1<3>)
+     LUT2:I0->O            1   0.479   0.681  d1/outputState_1_and00001 (place1_1_OBUF)
+     OBUF:I->O                 4.909          place1_1_OBUF (place1<1>)
+    ----------------------------------------
+    Total                     10.883ns (6.972ns logic, 3.911ns route)
+                                       (64.1% logic, 35.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.47 secs
+ 
+--> 
+
+Total memory usage is 4514092 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

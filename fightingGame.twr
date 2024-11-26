@@ -1,0 +1,134 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml fightingGame.twx fightingGame.ncd -o fightingGame.twr
+fightingGame.pcf
+
+Design file:              fightingGame.ncd
+Physical constraint file: fightingGame.pcf
+Device,package,speed:     xc3s400,pq208,-5 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+action1<0>  |    6.013(R)|    1.211(R)|controlledClk     |   0.000|
+action1<1>  |    6.007(R)|    0.866(R)|controlledClk     |   0.000|
+action1<2>  |    4.996(R)|    0.899(R)|controlledClk     |   0.000|
+action2<0>  |    5.360(R)|    1.164(R)|controlledClk     |   0.000|
+action2<1>  |    5.211(R)|    1.361(R)|controlledClk     |   0.000|
+action2<2>  |    4.754(R)|    1.133(R)|controlledClk     |   0.000|
+reset       |    2.028(R)|    0.680(R)|controlledClk     |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock control
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+action1<0>  |    5.888(R)|    1.367(R)|controlledClk     |   0.000|
+action1<1>  |    5.882(R)|    1.022(R)|controlledClk     |   0.000|
+action1<2>  |    4.871(R)|    1.055(R)|controlledClk     |   0.000|
+action2<0>  |    5.235(R)|    1.320(R)|controlledClk     |   0.000|
+action2<1>  |    5.086(R)|    1.517(R)|controlledClk     |   0.000|
+action2<2>  |    4.629(R)|    1.289(R)|controlledClk     |   0.000|
+reset       |    1.903(R)|    0.836(R)|controlledClk     |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+SEG_DATA<0> |    7.934(R)|clk_IBUF          |   0.000|
+SEG_DATA<2> |    8.237(R)|clk_IBUF          |   0.000|
+SEG_DATA<3> |    8.232(R)|clk_IBUF          |   0.000|
+SEG_DATA<4> |    7.311(R)|clk_IBUF          |   0.000|
+SEG_DATA<5> |    8.270(R)|clk_IBUF          |   0.000|
+SEG_DATA<6> |    7.948(R)|clk_IBUF          |   0.000|
+SEG_SEL<0>  |    7.318(R)|clk_IBUF          |   0.000|
+SEG_SEL<1>  |    8.055(R)|clk_IBUF          |   0.000|
+place1<0>   |   14.890(R)|controlledClk     |   0.000|
+place1<1>   |   14.501(R)|controlledClk     |   0.000|
+place1<2>   |   14.338(R)|controlledClk     |   0.000|
+place2<0>   |   14.064(R)|controlledClk     |   0.000|
+place2<1>   |   13.815(R)|controlledClk     |   0.000|
+place2<2>   |   14.522(R)|controlledClk     |   0.000|
+------------+------------+------------------+--------+
+
+Clock control to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+place1<0>   |   15.046(R)|controlledClk     |   0.000|
+place1<1>   |   14.657(R)|controlledClk     |   0.000|
+place1<2>   |   14.494(R)|controlledClk     |   0.000|
+place2<0>   |   14.220(R)|controlledClk     |   0.000|
+place2<1>   |   13.971(R)|controlledClk     |   0.000|
+place2<2>   |   14.678(R)|controlledClk     |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.929|         |         |         |
+control        |    8.929|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock control
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.613|         |         |         |
+control        |    7.613|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sun Jan 28 21:51:58 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4491 MB
+
+
+
